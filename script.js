@@ -94,18 +94,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header hide/show on scroll
+    // Header hide/show on scroll (disabled on mobile)
     let lastScrollTop = 0;
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down - hide header
-            header.style.transform = 'translateY(-100%)';
+        
+        // Only hide header on desktop screens (wider than 768px)
+        if (window.innerWidth > 768) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down - hide header
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up - show header
+                header.style.transform = 'translateY(0)';
+            }
         } else {
-            // Scrolling up - show header
+            // On mobile, always keep header visible
             header.style.transform = 'translateY(0)';
         }
 
