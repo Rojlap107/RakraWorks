@@ -1,5 +1,30 @@
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Advertisement Modal Logic
+    const adModal = document.getElementById('adModal');
+    const closeAdBtn = document.getElementById('closeAd');
+
+    // Show advertisement every time the page loads
+    if (adModal) {
+        adModal.classList.remove('hidden');
+        
+        // Close button functionality
+        if (closeAdBtn) {
+            closeAdBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                adModal.classList.add('hidden');
+            });
+        }
+        
+        // Close ad when clicking outside the modal content
+        adModal.addEventListener('click', function(e) {
+            if (e.target === adModal) {
+                adModal.classList.add('hidden');
+            }
+        });
+    }
+
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
     navLinks.forEach(link => {
@@ -128,6 +153,73 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentImageIndex = 0;
     let imageArray = [];
 
+    // Load gallery data from JSON and populate grid
+    async function loadGalleryData() {
+        try {
+            const response = await fetch('gallery-data.json');
+            const data = await response.json();
+            const galleryGrid = document.getElementById('gallery-grid');
+            
+            // Clear existing content
+            galleryGrid.innerHTML = '';
+            
+            // Store works data globally for lightbox
+            window.galleryWorks = data.works;
+            
+            // Populate gallery from JSON data
+            data.works.forEach((work, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'works-gallery-item-wrapper';
+                
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'works-gallery-item';
+                
+                const img = document.createElement('img');
+                img.src = work.src;
+                img.alt = work.title;
+                img.style.cursor = 'pointer';
+                img.dataset.index = index;
+                
+                imgContainer.appendChild(img);
+                
+                // Create info section
+                const infoSection = document.createElement('div');
+                infoSection.className = 'gallery-item-info';
+                infoSection.innerHTML = `
+                    <div class="gallery-item-title">${work.title}</div>
+                    <div class="gallery-item-meta">
+                        <strong>Kind:</strong> ${work.kind || 'N/A'}
+                    </div>
+                    <div class="gallery-item-meta">
+                        <strong>Year:</strong> ${work.year || 'N/A'}
+                    </div>
+                    <div class="gallery-item-meta">
+                        <strong>Size:</strong> ${work.size || 'N/A'}
+                    </div>
+                `;
+                
+                galleryItem.appendChild(imgContainer);
+                galleryItem.appendChild(infoSection);
+                galleryGrid.appendChild(galleryItem);
+                
+                // Add click event to image
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = index;
+                    openLightbox(index);
+                });
+            });
+            
+            // Re-initialize lightbox with new images
+            initializeLightbox();
+        } catch (error) {
+            console.error('Error loading gallery data:', error);
+        }
+    }
+
+    // Load gallery data on page load
+    loadGalleryData();
+
     // Function to initialize lightbox
     function initializeLightbox() {
         const galleryItems = document.querySelectorAll('.works-gallery-item img');
@@ -141,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
             img.addEventListener('click', function(e) {
                 e.stopPropagation();
                 currentImageIndex = index;
-                openLightbox(img.src);
+                openLightbox(index);
             });
         });
     }
@@ -154,27 +246,55 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Open lightbox
-    function openLightbox(imageSrc) {
-        if (lightboxModal && lightboxImage) {
-            lightboxImage.src = imageSrc;
+    function openLightbox(imageIndex) {
+        if (lightboxModal && lightboxImage && window.galleryWorks) {
+            const work = window.galleryWorks[imageIndex];
+            
+            lightboxImage.src = work.src;
+            
+            // Set artwork details
+            document.getElementById('lightbox-title').textContent = work.title;
+            document.querySelector('#lightbox-kind span').textContent = work.kind || 'N/A';
+            document.querySelector('#lightbox-year span').textContent = work.year || 'N/A';
+            document.querySelector('#lightbox-size span').textContent = work.size || 'N/A';
+            document.getElementById('lightbox-description').textContent = work.description || '';
+            
+            // Handle comments (can be array or string)
+            const commentsDiv = document.getElementById('lightbox-comments');
+            commentsDiv.innerHTML = '';
+            
+            if (work.comments) {
+                if (Array.isArray(work.comments)) {
+                    work.comments.forEach(comment => {
+                        const p = document.createElement('p');
+                        p.textContent = comment;
+                        commentsDiv.appendChild(p);
+                    });
+                } else if (typeof work.comments === 'string' && work.comments.trim()) {
+                    const p = document.createElement('p');
+                    p.innerHTML = work.comments; // Supports HTML like <br>
+                    commentsDiv.appendChild(p);
+                }
+            }
+            
             lightboxModal.classList.add('active');
         }
     }
 
     // Navigate to previous image
     function showPrevImage() {
-        currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
-        lightboxImage.src = imageArray[currentImageIndex];
+        currentImageIndex = (currentImageIndex - 1 + window.galleryWorks.length) % window.galleryWorks.length;
+        openLightbox(currentImageIndex);
     }
 
     // Navigate to next image
     function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % imageArray.length;
-        lightboxImage.src = imageArray[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % window.galleryWorks.length;
+        openLightbox(currentImageIndex);
     }
 
     // Initialize lightbox on page load
-    initializeLightbox();
+    // initializeLightbox(); // This line is now handled by loadGalleryData()
 
     // Event listeners for lightbox controls
     if (lightboxClose) {
@@ -208,4 +328,81 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Timeline Gallery Lightbox (for gallery.html)
+    const timelineImages = document.querySelectorAll('.timeline-content img');
+    let timelineImageArray = [];
+    
+    if (timelineImages.length > 0) {
+        // Store timeline images and their descriptions for lightbox navigation
+        timelineImageArray = Array.from(timelineImages).map(img => {
+            // Get the caption from the parent timeline-content div
+            const captionElement = img.closest('.timeline-content').querySelector('.gallery-item-caption p');
+            return {
+                src: img.src,
+                alt: img.alt,
+                description: captionElement ? captionElement.textContent : ''
+            };
+        });
+        
+        timelineImages.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentImageIndex = index;
+                openTimelineLightbox(index);
+            });
+        });
+    }
+    
+    // Open timeline lightbox
+    function openTimelineLightbox(imageIndex) {
+        if (lightboxModal && lightboxImage && timelineImageArray.length > 0) {
+            const image = timelineImageArray[imageIndex];
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            
+            // Update description
+            const descriptionDiv = document.getElementById('lightbox-description');
+            if (descriptionDiv) {
+                descriptionDiv.textContent = image.description;
+            }
+            
+            lightboxModal.classList.add('active');
+        }
+    }
+    
+    // Override navigation for timeline gallery
+    if (timelineImages.length > 0) {
+        // Replace the existing event listeners with timeline-specific ones
+        if (lightboxPrev) {
+            lightboxPrev.removeEventListener('click', showPrevImage);
+            lightboxPrev.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex - 1 + timelineImageArray.length) % timelineImageArray.length;
+                openTimelineLightbox(currentImageIndex);
+            });
+        }
+        if (lightboxNext) {
+            lightboxNext.removeEventListener('click', showNextImage);
+            lightboxNext.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex + 1) % timelineImageArray.length;
+                openTimelineLightbox(currentImageIndex);
+            });
+        }
+        
+        // Update keyboard navigation for timeline
+        document.addEventListener('keydown', function(e) {
+            if (lightboxModal && lightboxModal.classList.contains('active') && timelineImages.length > 0) {
+                if (e.key === 'ArrowLeft') {
+                    currentImageIndex = (currentImageIndex - 1 + timelineImageArray.length) % timelineImageArray.length;
+                    openTimelineLightbox(currentImageIndex);
+                } else if (e.key === 'ArrowRight') {
+                    currentImageIndex = (currentImageIndex + 1) % timelineImageArray.length;
+                    openTimelineLightbox(currentImageIndex);
+                } else if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
+    }
 });

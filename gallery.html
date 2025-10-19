@@ -8,12 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <div class="nav-left">
                 <a href="about.html" class="nav-link">About Rinpoche</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
             </div>
             <div class="logo">
                 <a href="index.html">
@@ -21,6 +28,7 @@
                 </a>
             </div>
             <div class="nav-right">
+                <a href="about-us.html" class="nav-link">About Us</a>
                 <a href="programme.html" class="nav-link">Programme</a>
             </div>
 
@@ -40,33 +48,189 @@
     </header>
 
     <main>
-        <section class="gallery-page">
-            <h1 class="gallery-page-title">Gallery</h1>
+        <!-- Lightbox Modal -->
+        <div id="lightbox-modal" class="lightbox-modal">
+            <div class="lightbox-modal-content">
+                <button class="lightbox-close">&times;</button>
+                <div class="lightbox-container">
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+                <div id="lightbox-description" class="lightbox-description">
+                    <!-- Description will be populated by JavaScript -->
+                </div>
+                <div class="lightbox-controls">
+                    <button id="lightbox-prev" class="lightbox-btn">&larr; Prev</button>
+                    <button id="lightbox-next" class="lightbox-btn">Next &rarr;</button>
+                </div>
+            </div>
+        </div>
 
-            <div class="gallery-page-grid">
-                <div class="gallery-page-item">
-                    <img src="img/gallery/rakra and gendun choenpel.jpg" alt="Rakra Rinpoche and Gendun Choenpel">
+        <section class="gallery-page">
+            <div class="gallery-page-container">
+                <h1 class="gallery-page-title">Gallery</h1>
+
+                <div class="gallery-introduction">
+                    <h2 class="gallery-intro-title">A Pictorial Journey</h2>
+                    <p class="gallery-intro-text">
+                        འདི་ནི་རག་ར་ཐུབ་བསྟན་ཆོས་དར་རིན་པོ་ཆེ་མཆོག་གི་མཛད་རྣམ་གྱི་འདྲ་པར་ལོ་རྒྱུས་མདོར་བསྡུས་ཤིག་ཡིན། དེ་ཡང་ཁོང་གི་བོད་ནང་གི་ཐོག་མའི་མཛད་པ་ནས་བཙན་བྱོལ་ནང་གི་མཛད་པ་རླབས་ཆེན་བར་དུ་བསྟན་ཡོད། འདྲ་པར་དང་རི་མོ་འདི་དག་བརྒྱུད་ནས་ཁོང་གི་མཁས་པ་དང་། དགེ་རྒན། སྒྱུ་རྩལ་མཁན། བོད་ཀྱི་རིག་གཞུང་དང་ནང་པའི་ཤེས་རབ་ལ་གུས་ཞབས་ཆེན་པོས་ཞབས་ཞུ་སྒྲུབ་མཁན་བཅས་ཀྱི་མཛད་པ་རྣམས་རྗེས་སུ་འདེད་ཐུབ། འདྲ་པར་རེ་རེས་དུས་ཚོད་ཀྱི་སྐར་ཆ་རེ་མཚོན་ཞིང་། སྐྱེས་བུ་དམ་པ་དེ་ཉིད་ཀྱི་མི་ཚེའི་ལོ་རྒྱུས་ནང་བོད་ཀྱི་ཤེས་རིག་གི་ཕྱུག་བང་མཚོན་པ་དང་། མ་འོངས་པའི་མི་རབས་ཚོའི་ཆེད་དུ་དེ་དག་སྲུང་འཛིན་བྱེད་རྒྱུའི་ཁོང་གི་དམ་བཅའ་མཚོན་ཡོད།
+                    </p>
+
+                    <p class="gallery-intro-text">
+                        This gallery presents a visual timeline of Rakra Thubten Choedar Rinpoche's remarkable life, spanning from his early years in Tibet to his transformative years in exile. Through these photographs and images, we trace his journey as a scholar, teacher, artist, and devoted servant to Tibetan culture and Buddhist wisdom. Each image captures a moment in time, telling the story of a man whose life embodied the rich heritage of Tibetan civilization and his commitment to preserving it for future generations.
+                    </p>
                 </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0014.JPG" alt="Rakra Rinpoche">
                 </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0008.JPG" alt="Rakra Rinpoche">
-                </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0002.JPG" alt="Rakra Rinpoche">
-                </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0031.jpg" alt="Rakra Rinpoche">
-                </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0016.JPG" alt="Rakra Rinpoche">
-                </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0024.JPG" alt="Rakra Rinpoche">
-                </div>
-                <div class="gallery-page-item">
-                    <img src="img/gallery/DSC_0012.JPG" alt="Rakra Rinpoche">
+
+                <div class="gallery-page-grid timeline-grid">
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1929_Baby_TCRakra_1stTrip_toPakshoe.jpg" alt="Baby Rakra's First Trip to Pakshoe">
+                            <div class="gallery-item-caption">
+                                <p>1929: Baby Rakra's first trip to Pakshoe Monastery, marking the beginning of his spiritual journey</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1940_TCRakra_B&W.jpg" alt="Rakra in 1940">
+                            <div class="gallery-item-caption">
+                                <p>1940: Rakra during his monastic education years, dedicated to rigorous scholarly pursuits</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1949_Moenlam_Rakra_as_gyegoe.jpg" alt="Rakra as Gyegoe at Monlam">
+                            <div class="gallery-item-caption">
+                                <p>1949: Rakra serving as Gyegoe (disciplinary master) during Monlam festival, a significant honor</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1950_rakra and gendun choemphel.jpg" alt="Rakra with Gendun Choephel">
+                            <div class="gallery-item-caption">
+                                <p>1950: Rakra with his influential teacher Gendun Choephel, a towering figure in Tibetan scholarship</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1950_TCRakra_Potala_B&W.jpg" alt="Rakra at Potala Palace">
+                            <div class="gallery-item-caption">
+                                <p>1950: Rakra at the Potala Palace during Tibet's final years before major political changes</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1956-60_TCRakraTethong_allindiaradio_Delhi.jpg" alt="Rakra at All India Radio Delhi">
+                            <div class="gallery-item-caption">
+                                <p>1956-60: Rakra serving at All India Radio, Tibetan service in Delhi, broadcasting to reach Tibetan audiences</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1960Aug17_1stDay_inPestalozziChildren‘sVillage_Trogen_Switzerland.jpg" alt="First Day at Pestalozzi">
+                            <div class="gallery-item-caption">
+                                <p>August 17, 1960: Rakra's first day at Pestalozzi Children's Village in Trogen, Switzerland, beginning his service to refugee children</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1960Oct2_Arrival_ChildrenGroup1.jpg" alt="Arrival of First Children Group">
+                            <div class="gallery-item-caption">
+                                <p>October 2, 1960: Arrival of the first group of Tibetan refugee children at Pestalozzi Children's Village</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1961April8_Inauguration_YambhuLagang Kopie.jpg" alt="Inauguration of Yambhu Lagang">
+                            <div class="gallery-item-caption">
+                                <p>April 8, 1961: Official inauguration day of Yambhu Lagang, the Buddhist chapel and spiritual sanctuary Rakra built</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1961April8_InaugurationCelebration_YambhuLagang.jpg" alt="Inauguration Celebration">
+                            <div class="gallery-item-caption">
+                                <p>April 8, 1961: Celebration of the inauguration of Yambhu Lagang with community members and supporters</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1961April8_InauguratonDay_ofYambhuLagang.jpg" alt="Inauguration Day Gathering">
+                            <div class="gallery-item-caption">
+                                <p>April 8, 1961: Community gathering at the inauguration of Yambhu Lagang, celebrating this spiritual milestone</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1973_TCRakra.jpg" alt="Rakra in 1973">
+                            <div class="gallery-item-caption">
+                                <p>1973: Rakra during his productive years of teaching and cultural preservation in Switzerland</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1973_Visit_of_HHthe14thDalaiLama.jpg" alt="Visit of His Holiness the 14th Dalai Lama">
+                            <div class="gallery-item-caption">
+                                <p>1973: His Holiness the 14th Dalai Lama's visit, a significant occasion for Rakra and the Tibetan community</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1986_Teaching_final_TibChildrenGroup.jpg" alt="Final Teaching of Tibetan Children">
+                            <div class="gallery-item-caption">
+                                <p>1986: Rakra teaching the final group of Tibetan refugee children, passing on his wisdom and traditions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <img src="img/pictorial journey/1988_Final_Move_to_Rapperswil-Jona.jpg" alt="Final Move to Rapperswil-Jona">
+                            <div class="gallery-item-caption">
+                                <p>1988: Rakra's final move to Rapperswil-Jona, a new chapter in his continued service to the Tibetan community</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
                 </div>
             </div>
         </section>
