@@ -1,0 +1,112 @@
+{
+  "home": {
+    "tibetan": {
+      "hero_title": "རག་ར་གཞི་རིས།",
+      "coming_soon": "ཉེ་བར་དུས་ཚོད་ལ་ཡོང་རྒྱུ་ལགས།"
+    },
+    "english": {
+      "hero_title": "Rakra Works",
+      "coming_soon": "Coming Soon"
+    }
+  },
+  "navigation": {
+    "tibetan": {
+      "about_rinpoche": "རག་ར་བཀྲས་མཐོང་།",
+      "gallery": "འདྲ་པར།",
+      "about_us": "ང་ཚོའི་སྐོར།",
+      "programme": "ལས་འཆར།"
+    },
+    "english": {
+      "about_rinpoche": "Rakra Tethong",
+      "gallery": "Gallery",
+      "about_us": "About Us",
+      "programme": "Programme"
+    }
+  },
+  "about": {
+    "tibetan": {
+      "title": "རག་ར་ཐུབ་བསྟན་ཆོས་དར་རིན་པོ་ཆེ།",
+      "content": "རག་ར་ཐུབ་བསྟན་ཆོས་དར་རིན་པོ་ཆེ་ (༡༩༢༥-༢༠༡༢) ནི་བོད་ཀྱི་མཁས་པ་དང་སྙན་ངག་པ། རི་མོ་མཁན། སློབ་དཔོན་གཅེས་འཛིན་ཞིག་ཡིན། ཁོང་དགུང་ལོ་གཉིས་ཀྱི་སྐབས་སུ་ཁམས་པག་ཤོད་དགོན་པའི་རག་ར་སྤྲུལ་སྐུ་སྐུ་ཕྲེང་དྲུག་པར་ངོས་འཛིན་གནང་ཞིང་། ཁོང་གིས་ཤན་ཐི་ནི་ཁེ་ཐན་ (Shantiniketan) དང་པུ་ནེ་གཙུག་ལག་སློབ་གྲྭ་ཆེན་མོར་ (Pune University) སློབ་སྦྱོང་མུ་མཐུད་མ་གནང་གོང་དུ་དགོན་པའི་མཐོ་ཤོས་ཀྱི་མཚན་རྟགས་བཞེས། ཁོང་གིས་དམ་བཅའ་བོར་ནས་བསམ་གཏན་སྒྲོལ་མ་ལྷ་རྗེ་དང་གཉེན་སྒྲིག་བྱས་རྗེས་ཏཱ་ལའི་བླ་མ་མཆོག་གིས་ཁོང་ཕྱི་ལོ་ ༡༩༦༠ ལོར་བོད་ཀྱི་དྭ་ཕྲུག་དང་སྐྱབས་བཅོལ་བའི་ཕྲུ་གུ་ཚོགས་པ་ཞིག་ལ་ལྟ་སྐྱོང་བྱེད་ཆེད་སུད་སི་ལ་མངགས། ཁོང་ནི་དགེ་འདུན་ཆོས་འཕེལ་གྱི་སློབ་མ་ཞིག་ཡིན་ཞིང་། ཁོང་གིས་ཐོག་ཁྱིམ་དུ་སློབ་སྦྱོང་བྱེད་ཐུབ་པའི་ཤེས་ཡོན་དང་། བོད་ཀྱི་རྩོམ་རིག་རྙིང་པ་དང་དེང་རབས། ནང་པའི་བཟང་སྤྱོད་བཅས་ལ་དགའ་ཞེན་ཆེན་པོ་གནང་། ཁོང་གི་དཔེ་དེབ་དང་རི་མོ། བསྟན་བཅོས་བཅས་ཀྱིས་བོད་ཀྱི་ས་གནས་དང་གཞན་དུ་འགྲོ་བ་རྣམས་ལ་མི་རབས་མང་པོར་སྐུལ་མ་སྤེལ་བཞིན་ཡོད།",
+      "painting_works": "རིན་པོ་ཆེའི་ལག་འབྲི་རི་མོ་དང་ཕྱགས་ལས་རྣམས།",
+      "release_notice": "ཉེ་བར་དུས་ཚོད་ལ་གསར་བསྐོས་ཞིག་ཡོང་རྒྱུ་ཡིན།"
+    },
+    "english": {
+      "title": "About Rakra Thubten Choedar",
+      "content": "Rakra Thubten Choedar Rinpoche (1925-2012) from Tethong family was a revered Tibetan scholar, poet, artist, and educator. Recognized at the age of two as the 6th Rakra Trulku of Pakshoe Monastery in Kham, he earned the highest monastic degrees before continuing his studies at Shantiniketan and Pune University. After renouncing his vows and marrying Samten Dolma Lharjay, he was sent to Switzerland in 1960 by the Dalai Lama to care for a group of Tibetan orphans and refugee children. A disciple of Gendun Chophel, he was deeply devoted to accessible education, classical and modern Tibetan literature, and Buddhist ethics. His books, illustrations, and teachings continue to inspire generations across Tibet and the diaspora.",
+      "painting_works": "Painting & Works",
+      "release_notice": "More works will be released on November 20, 2025"
+    }
+  },
+  "about_us": {
+    "tibetan": {
+      "title": "རག་ར་གཞི་རིས་ལ་གཏུབ།",
+      "initiative_title": "རག་ར་གཞི་རིས་མཛད་སྒོ།",
+      "initiative_content": "རག་ར་གཞི་རིས་ནི་རག་ར་ཐུབ་བསྟན་ཆོས་དར་རིན་པོ་ཆེའི་བུ་མོ་དང་བུ་ཚོའི་མཐུན་རིས་ལ་ཞུགས་སའི་གཞི་རིས་ཞིག་ཡིན། ཁོང་གི་མཁས་རབས་དང་སྙན་ངག། རི་མོ་དང་ཆོས་ཀྱི་མཛད་པ་རྣམས་སྲུང་སྐྱོབ་ཐུབ་པའི་དོན་དུ། ང་ཚོ་འདིས་ཁོང་གི་ཆོས་ཀྱི་བཤད་གླེང་དང་རྩོམ་རིགས། རི་མོ་དེ་རྣམས་འཛམ་གླིང་ན་ཡོད་པའི་མཁས་པ་དང་སྒྲུབ་ཐབས་པ། སློབ་མ་ཚོའི་ཐུགས་གསུང་སེམས་ལ་སླེབ་པ་ལ་དགེ་མཚན་གནང་བའི་ཕྱིར་ཉིན་མཐའ་མར་འབད་ནས་སོང་གི་ཡོད།",
+      "foreword_title": "གུང་གཞི་ཙོ། དབང་པོ་གཏེ་ཐོང་གིས་གོ་བསྒྲིགས།",
+      "foreword_text": "\"འདི་དག་ནི་དུས་རྒྱལ་གཞན་ཞིག་ལས་བརྒྱུད་ནས་ཡོང་བའི་མཛད་པ་ཞིག་ཡིན། དེ་ཡང་དེ་ཁོ་ན་ཡོད་དེ་འདིའི་རྗེས་སུ་དེའི་ནོར་བུ་གཞིས་སྐབས་ཀྱི་གང་མཆོག་ཏུ་སྒྲུབ་ཐུབ་པ་ལགས། ཁོང་གི་མཛད་པ་གོང་རེ་ནི་མིའི་རྩིས་ལས་འདི་ལྟ་བུའི་ཆེད་དུ་ནོར་བུ་འདི་ཐོགས་རྒྱུའི་འབད་བརྩོན་འདི་ཞིག་ཟིན་ཞིང་། མིའི་རྩིས་དེ་དང་བོད་ནི་མཐའ་དཔྱད་དགེ་མཚན་སྐྱེད་པའི་ཆེད་དུའོ།\"",
+      "read_full_foreword": "སྐུ་མདངགས་གསུང་རབ་ཡོངས་ཀྱི་གླེང་སྟེགས་ལ་ལྟ།",
+      "credit": "གདེགས་རིས་ལ་དགེ་བ་དང་འབྲེལ་བའི་ཆེད་ཙོ། དེ་བདག་ཏེན་ཟིན་པོ་ལ་ཐུགས་རྗེ་གནང་།",
+      "contact": "ལྷག་པའི་ངོ་སྤྲོད་དེ་འདིའི་དོན་དུ། ང་ཚོ་སྐེ་ཞུ་ཕུལ་བའི་ཀཱོརཀླེ་དུ་གཏུབ། rakra.works@tethong.ch"
+    },
+    "english": {
+      "title": "About Rakra Works",
+      "initiative_title": "About Rakra Works",
+      "initiative_content": "Rakra Works is a private initiative by the children of Rakra Thubten Choedar Rinpoche, dedicated to preserving and sharing the profound legacy of their father's scholarly and artistic works. Through this platform, we aim to make his teachings, writings, and artistic contributions accessible to a global audience of scholars, practitioners, and students of Tibetan Buddhism.",
+      "foreword_title": "Foreword by Wangpo Tethong",
+      "foreword_text": "\"These works stem from another era, and perhaps it is precisely for this reason that they may have a value for today's readers that goes far beyond what we ordinarily call 'cultural preservation.' His works are the testimony of a man who tried with all his might to orient himself in this new world and to find meaning for himself and for Tibetan society.\"",
+      "read_full_foreword": "Read Full Foreword",
+      "credit": "Website developed by Tenzin Paljor",
+      "contact": "For more information, contact us at rakra.works@tethong.ch"
+    }
+  },
+  "gallery": {
+    "tibetan": {
+      "title": "སྐུ་པར་འགྲེམས་སྟོན།",
+      "intro_title": "པར་རིས་ཐོགས་ནས་ལོ་རྒྱུས།",
+      "intro_text": "འདི་ནི་རག་ར་ཐུབ་བསྟན་ཆོས་དར་བཀྲས་མཐོང་རིན་པོ་ཆེ་མཆོག་གི་མཛད་རྣམ་མདོར་བསྡུས་ཤིག་ཡིན་ཞིང་། ཁོང་གི་བོད་ནང་གི་ཐོག་མའི་མཛད་པ་ནས་བཙན་བྱོལ་དུ་ཕེབས་པའི་བར་གྱི་མཛད་པ་རྣམས་མཚོན་ཡོད། པར་དང་རི་མོའི་ལམ་ནས་ཁོང་གི་མཁས་པ་དང་། དགེ་རྒན། སྒྱུ་རྩལ་བ། བོད་ཀྱི་རིག་གཞུང་དང་ནང་པའི་ཤེས་རབ་ལ་གུས་ཞབས་ཆེ་བའི་ཞབས་ཞུ་བ་བཅས་ཀྱི་མཛད་རྣམ་རྗེས་སུ་འདེད་ཐུབ། པར་རེ་རེས་དུས་ཚོད་ཀྱི་སྐར་ཆ་རེ་མཚོན་ཞིང་། ཁོང་གི་མི་ཚེས་བོད་ཀྱི་ཤེས་རིག་གི་ཕྱུག་བདག་མཚོན་པ་དང་འབྱུང་འགྱུར་མི་རབས་ཚོའི་ཆེད་དུ་དེ་དག་སྲུང་འཛིན་བྱེད་པའི་དམ་བཅའ་བརྟན་པོ་མཚོན་ཡོད།"
+    },
+    "english": {
+      "title": "Gallery",
+      "intro_title": "A Pictorial Journey",
+      "intro_text": "This gallery presents a visual timeline of Rakra Thubten Choedar Tethong Rinpoche's remarkable life, spanning from his early years in Tibet to his transformative years in exile. Through these photographs and images, we trace his journey as a scholar, teacher, artist, and devoted servant to Tibetan culture and Buddhist wisdom. Each image captures a moment in time, telling the story of a man whose life embodied the rich heritage of Tibetan civilization and his commitment to preserving it for future generations."
+    }
+  },
+  "programme": {
+    "tibetan": {
+      "title": "མཛད་སྒོ།",
+      "event_date": "སྤྱི་ལོ་ ༢༠༢༥ ཟླ་ ༡༢ ཚེས་ ༡༨ ཉིན།",
+      "event_location": "རྡ་རམ་ས་ལ།",
+      "event_description_1": "རག་ར་ཐུབ་བསྟན་ཆོས་དར་རིན་པོ་ཆེ་སྐུ་འཁྲུངས་ནས་ལོ་ངོ་ ༡༠༠ འཁོར་བའི་དུས་དྲན་དང་བསྟུན་ཏེ་ཁོང་གི་གསུང་འབུམ་པོད་ ༡༧ དབུ་འབྱེད་མཛད་སྒོར་ཕེབས་པར་དགའ་བསུ་ཞུ། དེ་ནི་ཁོང་གི་བརྩམས་ཆོས་དང་བསླབ་བྱ་རྣམས་ཕྱོགས་གཅིག་ཏུ་བསྡུས་པའི་གཏེར་མཛོད་རྨད་དུ་བྱུང་བ་ཞིག་ཡིན།",
+      "event_description_2": "རཱ་ཀ་རིན་པོ་ཆེ་མཆོག་གི་ནང་མི་དང་བོད་ཀྱི་དཔེ་མཛོད་ཁང་གཉིས་མཉམ་འབྲེལ་ཐོག་གོ་སྒྲིག་ཞུས་པའི་མཛད་སྒོ་འདི་ནི་ཁོང་གི་མཁྱེན་རབ་དང་ཐུགས་སྟོབས་ཀྱི་རླབས་ཆེན་མཛད་རྗེས་ལ་རྗེས་དྲན་ཞུ་ཆེད་ཡིན།",
+      "event_description_3": "དེང་གི་དུས་སུ་དཔར་སྐྲུན་འདི་ལྟ་བུ་ནི་བོད་ཀྱི་ནང་བསྟན་སློབ་གཉེར་ལ་མེད་དུ་མི་རུང་བའི་ལེགས་སྐྱེས་ཤིག་ཡིན་པ་དང་འབྱུང་འགྱུར་མི་རབས་ཚོའི་ཆེད་དུ་རག་ར་རིན་པོ་ཆེའི་མཛད་རྗེས་ཟབ་མོ་དག་སྲུང་སྐྱོབ་ཐུབ་པ་ཞིག་ཀྱང་ཡིན། མཁས་པ་དང་ཉམས་ལེན་པ་སློབ་མ་བཅས་ཚང་མ་ཁོང་གི་མཛད་འཕྲིན་ལ་གུས་བཀུར་ཞུ་བར་འདུ་འཛོམས་བྱ་རྒྱུ་ཡིན།",
+      "registration_title": "སྐུ་འདུན་ཀ།",
+      "registration_text": "མཛད་སྒོ་དེའི་སྐུ་འདུན་བྱེད་ཕྱིར་ལན་གའི་ཀ་དེ་བཀང་ནས་སྐུ་འདུན་བྱོས་རོགས།",
+      "register_now": "སྐུ་འདུན་ལ་སྐུ་རོགས།",
+      "event_date_english": "18th December 2025",
+      "event_location_english": "Dharamsala"
+    },
+    "english": {
+      "title": "Programme",
+      "event_date": "18th December 2025",
+      "event_location": "Dharamsala",
+      "event_description_1": "Join us in marking the 100th birth anniversary of Rakra Thubten Choedar Rinpoche with the launch of his Collected Works in 17 volumes—an enduring treasury of his writings and teachings.",
+      "event_description_2": "Organized by the Library of Tibetan Works and Archives (LTWA) in collaboration with the family of Rakra Rinpoche, this event pays tribute to his remarkable intellectual and spiritual legacy.",
+      "event_description_3": "This landmark publication stands as a vital contribution to Tibetan Buddhist scholarship and safeguards the profound legacy of Rakra Rinpoche for future generations. Scholars, practitioners, and students will gather to honor his life and work.",
+      "registration_title": "Event Registration",
+      "registration_text": "To register for this commemoration event, please fill out the registration form.",
+      "register_now": "Register Now"
+    }
+  },
+  "footer": {
+    "tibetan": {
+      "copyright": "© 2025 རག་ར་གཞི་རིས། སྐུ་གསོ་གི་ཆ་ཤས་ཚང་མ་སྲུང་སྐྱོབ་ཡོད།"
+    },
+    "english": {
+      "copyright": "© 2025 Rakra Works. All rights reserved."
+    }
+  },
+  "language_switcher": {
+    "tibetan": "བོད་",
+    "english": "English"
+  }
+}
