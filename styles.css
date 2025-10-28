@@ -64,6 +64,11 @@ body {
     color: #fff;
 }
 
+/* Increase font size when displaying Tibetan in header */
+[lang="bo"] .nav-link {
+    font-size: 1.5rem;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
