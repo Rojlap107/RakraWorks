@@ -960,6 +960,24 @@ body {
     color: #888;
 }
 
+.developer-credit {
+    color: #888;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.developer-credit a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .read-more-link {
     display: inline-block;
     width: fit-content;
