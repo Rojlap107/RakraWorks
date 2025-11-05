@@ -89,6 +89,7 @@ body {
     background: url('img/hero-background.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +144,7 @@ body {
     background: url('img/background-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,6 +194,7 @@ body {
     background: url('img/background-flipped.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 6rem 2rem;
     text-align: center;
 }
@@ -398,6 +401,7 @@ body {
     background: url('img/background-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 8rem 2rem 4rem 2rem;
 }
 
@@ -604,6 +608,7 @@ body {
     background: url('img/background-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 8rem 2rem 4rem 2rem;
     display: flex;
     align-items: center;
@@ -862,6 +867,7 @@ body {
     background: url('img/background-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 8rem 2rem 4rem 2rem;
 }
 
@@ -1020,6 +1026,7 @@ body {
     background: url('img/background-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 8rem 2rem 4rem 2rem;
 }
 
@@ -1172,6 +1179,7 @@ body {
     background: url('img/background.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 4rem 2rem;
 }
 
