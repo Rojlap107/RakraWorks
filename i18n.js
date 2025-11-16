@@ -1,3 +1,7 @@
+const i18nScriptElement = document.currentScript || Array.from(document.querySelectorAll('script[src]')).find(script => script.src.includes('i18n.js'));
+const i18nScriptURL = i18nScriptElement ? new URL(i18nScriptElement.getAttribute('src'), window.location.href) : new URL('i18n.js', window.location.href);
+const i18nAssetsBaseURL = new URL('.', i18nScriptURL);
+
 // Language Manager for Rakra Works
 class LanguageManager {
     constructor() {
@@ -12,7 +16,7 @@ class LanguageManager {
         this.isLoading = true;
         
         try {
-            const response = await fetch('translations.json');
+            const response = await fetch(new URL('translations.json', i18nAssetsBaseURL));
             if (!response.ok) {
                 throw new Error(`Failed to load translations: ${response.status}`);
             }
@@ -22,7 +26,7 @@ class LanguageManager {
             return true;
         } catch (error) {
             console.error('✗ Error loading translations:', error);
-            console.error('Translation file path: translations.json');
+            console.error('Translation file path:', new URL('translations.json', i18nAssetsBaseURL).toString());
             console.error('Current URL:', window.location.href);
             this.isLoading = false;
             return false;
@@ -183,7 +187,10 @@ class LanguageManager {
         // Create flag image
         const flagImg = document.createElement('img');
         flagImg.className = 'language-flag';
-        flagImg.src = this.currentLanguage === 'tibetan' ? 'img/flags/tibetan.jpg' : 'img/flags/english.jpg';
+        flagImg.src = (this.currentLanguage === 'tibetan'
+            ? new URL('img/flags/tibetan.jpg', i18nAssetsBaseURL)
+            : new URL('img/flags/english.jpg', i18nAssetsBaseURL)
+        ).toString();
         flagImg.alt = this.currentLanguage === 'tibetan' ? 'Tibetan' : 'English';
         flagImg.id = 'current-flag';
         
@@ -213,7 +220,7 @@ class LanguageManager {
         
         const tibetanFlag = document.createElement('img');
         tibetanFlag.className = 'language-option-flag';
-        tibetanFlag.src = 'img/flags/tibetan.jpg';
+        tibetanFlag.src = new URL('img/flags/tibetan.jpg', i18nAssetsBaseURL).toString();
         tibetanFlag.alt = 'Tibetan';
         
         const tibetanText = document.createElement('span');
@@ -229,7 +236,7 @@ class LanguageManager {
         
         const englishFlag = document.createElement('img');
         englishFlag.className = 'language-option-flag';
-        englishFlag.src = 'img/flags/english.jpg';
+        englishFlag.src = new URL('img/flags/english.jpg', i18nAssetsBaseURL).toString();
         englishFlag.alt = 'English';
         
         const englishText = document.createElement('span');
@@ -287,7 +294,10 @@ class LanguageManager {
         const label = document.getElementById('current-label');
         
         if (flagImg) {
-            flagImg.src = this.currentLanguage === 'tibetan' ? 'img/flags/tibetan.jpg' : 'img/flags/english.jpg';
+            flagImg.src = (this.currentLanguage === 'tibetan'
+                ? new URL('img/flags/tibetan.jpg', i18nAssetsBaseURL)
+                : new URL('img/flags/english.jpg', i18nAssetsBaseURL)
+            ).toString();
             flagImg.alt = this.currentLanguage === 'tibetan' ? 'Tibetan' : 'English';
         }
         

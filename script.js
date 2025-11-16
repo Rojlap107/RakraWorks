@@ -1,3 +1,7 @@
+const scriptElement = document.currentScript || Array.from(document.querySelectorAll('script[src]')).find(script => script.src.includes('script.js'));
+const scriptURL = scriptElement ? new URL(scriptElement.getAttribute('src'), window.location.href) : new URL('script.js', window.location.href);
+const assetsBaseURL = new URL('.', scriptURL);
+
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Advertisement Modal Logic
@@ -156,18 +160,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load gallery data from JSON and populate grid
     async function loadGalleryData() {
         try {
-            const response = await fetch('gallery-data.json');
+            const response = await fetch(new URL('gallery-data.json', assetsBaseURL));
             const data = await response.json();
+            const normalizedWorks = data.works.map(work => ({
+                ...work,
+                src: new URL(work.src, assetsBaseURL).href
+            }));
             const galleryGrid = document.getElementById('gallery-grid');
             
             // Clear existing content
             galleryGrid.innerHTML = '';
             
             // Store works data globally for lightbox
-            window.galleryWorks = data.works;
+            window.galleryWorks = normalizedWorks;
             
             // Populate gallery from JSON data
-            data.works.forEach((work, index) => {
+            normalizedWorks.forEach((work, index) => {
                 const galleryItem = document.createElement('div');
                 galleryItem.className = 'works-gallery-item-wrapper';
                 
