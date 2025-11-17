@@ -3,11 +3,11 @@
     {
       "id": 1,
       "src": "img/gallery/1.jpg",
-      "title": "Clay Statue of Lord Buddha",
+      "title": "Lord Buddha",
       "description": "RT sculptured this statue of Lord Buddha in August 1960, immediately after his arrival in Switzerland. He did so in anticipation of soon raising 20 Tibetan children in the traditional Buddhist way, while living in a Christian environment. RT was determined to complete this first task in one go, before meeting any of the donors of Pestalozzi Children's Village. Mr. Bill, the director of the institution, often shared how embarrassed he felt when he had to postpone all the pre-arranged meetings with donors due to RT's insistence. Over all the years, this statue used to be part of the house alter in Yambhu Lagang.",
       "kind": "Clay Statue",
       "year": "1960",
-      "size": "Height - Not specified",
+      "size": "H39x30x25",
       "comments": ["• 1960, August 17 – Arrival date RT+family of 3", 
       "• 1960, October 2 - Arrival date of the 1st group of children"
     ]
@@ -15,31 +15,31 @@
     {
       "id": 2,
       "src": "img/gallery/2.jpg",
-      "title": "Painting of His Holiness the 14th Dalai Lama",
-      "description": "This painting of His Holiness the 14th Dalai Lama (size: approx. 100x100cm) was RT's first painting in Switzerland. Like the Buddha statue, this painting was also part of the house altar in Yambhu Lagang.",
+      "title": "Painting of H.H. the 14th Dalai Lama",
+      "description": "This painting of His Holiness the 14th Dalai Lama was RT's first painting in Switzerland. Like the Buddha statue, this painting was also part of the house altar in Yambhu Lagang.",
       "kind": "Oil On Canvas",
       "year": "1960",
       "size": "100 x 100",
-      "comments": "We used to have 2 altars, both built by a local Swiss carpenter based on RT's design. See photo."
+      "comments": "We used to have 2 altars, both built by a local Swiss carpenter based on RT's design."
     },
     {
       "id": 3,
       "src": "img/gallery/3.jpg",
-      "title": "Yambhu Lagang of Pestalozzi Children's Village",
+      "title": "Yumbhu Lhagang ཡུམ་བུ་བླ་སྒང, the oldest fort/palace (2nd century BCE) in Tibet",
       "description": "The construction of the first Tibetan House in Pestalozzi Children's Village, Trogen AR, Switzerland, started in Summer 1960 and was completed in Spring 1961. It was named Yambhu Lagang by HH the 14th Dalai Lama, after the oldest fort/palace ཡུམ་བུ་བླ་སྒང (2nd century BCE) in Tibet. This oil painting used to decorate the wall of the staircase, opposite the main entrance.",
       "kind": "Oil On Canvas",
       "year": "1960",
-      "size": "32x40",
+      "size": "40x32",
       "comments": "1961, April 8 - Inaugaration celebration of the first Tibetan House Yambhu Lagang. See photo: how the Tibetan flag was hissed. Should you use this photo, make sure to mention Copyright Pestalozzi Children's Village Foundation. "
     },
     {
       "id": 4,
       "src": "img/gallery/4.jpg",
-      "title": "P3",
+      "title": "Thank you, Dr. Arthur Bill…",
       "description": "Painted in Delhi to be presented in 1960 to Dr. Arthur Bill, Director of Pestalozzi Children's Village (1949-1972). Many decades later, before Mr. Bill's move to the old age home, RT and his wife were invited to Mr. Bill's home place in Gerzensee BE. There Mr. Bill asked RT to write some few words for him on this painting, but returned the painting to RT together with a beautiful Tibetan sword which he received from H.H. the Dalai Lama at their first meeting. Mr. Bill believed an old age home wasn't the right place for these cherished gifts, but asked RT to find a place to keep them in his memory. Dr. Arthur Bill passed away in 2011 at the age of 95.",
       "kind": "Watercolor On Paper",
       "year": "1959-1960",
-      "size": "50x70",
+      "size": "70x50",
       "comments": ""
     },
     {
@@ -47,9 +47,9 @@
       "src": "img/gallery/5.jpg",
       "title": "Sunset in Tibet",
       "description": "Sunset in Tibet, a recollelction of a sunset in Tibet, drawn from his memory. This painting used to decorate the living room of Yambhu Lagang.",
-      "kind": "Acryl+Mineral Paint On Painting Board",
-      "year": "1969",
-      "size": "",
+      "kind": "Acryl + Mineral Paint On Painting Board",
+      "year": "1960",
+      "size": "47x29",
       "comments": ""
     }
   ]
