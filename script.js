@@ -4,31 +4,6 @@ const assetsBaseURL = new URL('.', scriptURL);
 
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Advertisement Modal Logic
-    const adModal = document.getElementById('adModal');
-    const closeAdBtn = document.getElementById('closeAd');
-
-    // Show advertisement every time the page loads
-    if (adModal) {
-        adModal.classList.remove('hidden');
-        
-        // Close button functionality
-        if (closeAdBtn) {
-            closeAdBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                adModal.classList.add('hidden');
-            });
-        }
-        
-        // Close ad when clicking outside the modal content
-        adModal.addEventListener('click', function(e) {
-            if (e.target === adModal) {
-                adModal.classList.add('hidden');
-            }
-        });
-    }
-
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
     navLinks.forEach(link => {

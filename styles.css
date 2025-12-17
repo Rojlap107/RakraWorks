@@ -897,7 +897,8 @@ body {
 .initiative-section,
 .foreword-section,
 .credit-section,
-.contact-section {
+.contact-section,
+.books-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -908,6 +909,36 @@ body {
     color: #d4af37;
     font-weight: 500;
     margin-bottom: 0.5rem;
+}
+
+/* Books Section Styles */
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.book-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #d4af37;
+}
+
+.book-title {
+    font-size: 1.3rem;
+    color: #d4af37;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.book-synopsis {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: justify;
 }
 
 .section-text,
@@ -1631,109 +1662,6 @@ body:has(.lightbox-modal.active) {
     .lightbox-btn {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
-    }
-}
-
-/* Advertisement Modal Styles */
-.ad-modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.ad-modal.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.ad-modal-content {
-    position: relative;
-    max-width: 70vw;
-    max-height: 70vh;
-    background: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
-}
-
-.ad-link {
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.ad-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: none;
-}
-
-.ad-desktop {
-    display: block;
-}
-
-.ad-mobile {
-    display: none;
-}
-
-.ad-close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #d4af37;
-    color: #d4af37;
-    width: 45px;
-    height: 45px;
-    font-size: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2001;
-}
-
-.ad-close-btn:hover {
-    background: rgba(212, 175, 55, 0.1);
-    transform: rotate(90deg);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-}
-
-/* Mobile advertisement adjustments */
-@media (max-width: 768px) {
-    .ad-modal-content {
-        max-width: 90vw;
-        max-height: 80vh;
-    }
-
-    .ad-close-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-        top: 10px;
-        right: 10px;
-    }
-
-    .ad-desktop {
-        display: none;
-    }
-
-    .ad-mobile {
-        display: block;
     }
 }
 
